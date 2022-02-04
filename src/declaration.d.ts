@@ -5,6 +5,7 @@ declare module '*.css' {
 
 declare module '*.scss' {
     const mapping: Record<string, string>
+    // const mapping: string
     export default mapping
 }
 

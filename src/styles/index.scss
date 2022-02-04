@@ -25,7 +25,7 @@ code {
 #root {
     height: 100%;
 
-    padding: 40px 75px;
+    padding: 35px 60px;
 
     // Mobile: Smaller padding.
     @media (max-width: 767px) {
@@ -33,24 +33,12 @@ code {
     }
 }
 
-// html,
-// body {
-//     height: 100%;
-//     width: 100%;
-//     padding: 0;
-//     margin: 0;
-//     background: #fafafa;
-//     font-family: 'Helvetica Neue', arial, sans-serif;
-//     font-weight: 400;
-//     color: #444;
-//     -webkit-font-smoothing: antialiased;
-//     -moz-osx-font-smoothing: grayscale;
+// ——————————————————————————————————————————
+
+// .navLink {
+//     font-size: 30px;
 // }
 
-// * {
-//     box-sizing: border-box;
-// }
-
-// #preact_root {
-//     height: 100%;
+// .oops {
+//     background: yellow;
 // }

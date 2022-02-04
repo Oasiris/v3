@@ -12,8 +12,8 @@ const App: FunctionalComponent = () => {
             <Header />
             <Router>
                 <Route path="/" component={Home} />
-                <Route path="/about/" component={About} user="me" />
-                <Route path="/about/:user" component={About} />
+                {/* <Route path="/about/" component={About} user="me" /> */}
+                <Route path="/about/" component={About} />
                 <NotFoundPage default />
             </Router>
         </div>

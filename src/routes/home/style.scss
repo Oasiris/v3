@@ -1,5 +1,25 @@
-.home {
-    padding: 56px 20px;
-    min-height: 100%;
-    width: 100%;
+@import '../../styles/colors';
+
+// section {
+//     background: blue;
+// }
+
+.hookSection,
+.listSection {
+    border-bottom: 1px solid $hrColor;
+    box-sizing: border-box;
+}
+
+.hookSection {
+    border-top: 1px solid $hrColor;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+
+.listSection {
+    padding-top: 30px;
+    padding-bottom: 55px;
+
+    .sectionHeader {
+    }
 }

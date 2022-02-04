@@ -1,41 +1,36 @@
 import { FunctionalComponent, h } from 'preact'
 import { Link } from 'preact-router/match'
-
 import { Icon } from '@material-ui/core'
 
 import CottageOutlinedSvg from '../../assets/icons/cottage-outlined.svg'
 
-import './style.scss'
+import style from './style.scss'
 
 const Header: FunctionalComponent = () => {
     return (
         <header className="header">
-            <nav role="navigation">
-                <Link className="navLink homeNavLink" activeClassName="activeNavLink" href="/">
-                    <Icon>
-                        <img src={CottageOutlinedSvg} height={32} width={32} />
-                    </Icon>
-                </Link>
-                <div class="_right">
-                    <Link className="navLink aboutNavLink" activeClassName="activeNavLink" href="/">
-                        About
+            <div className="container">
+                <nav class={style.nav} role="navigation">
+                    <Link
+                        className={`${style.navLink} ${style.homeNavLink}`}
+                        activeClassName={style.activeNavLink}
+                        href="/"
+                    >
+                        <Icon>
+                            <img src={CottageOutlinedSvg} height={30} width={30} />
+                        </Icon>
                     </Link>
-                </div>
-            </nav>
-
-            {/* <h1>Preact App</h1>
-            <nav>
-                <Link activeClassName={style.active} href="/">
-                    Home
-                </Link>
-                <Link activeClassName={style.active} href="/profile">
-                    Me
-                </Link>
-                <Link activeClassName={style.active} href="/profile/john">
-                    John
-                </Link>
-            </nav> */}
-            <div>Test</div>
+                    <div className={`${style._right}`}>
+                        <Link
+                            className={`${style.navLink} ${style.aboutNavLink}`}
+                            activeClassName="activeNavLink"
+                            href="/about"
+                        >
+                            About
+                        </Link>
+                    </div>
+                </nav>
+            </div>
         </header>
     )
 }
