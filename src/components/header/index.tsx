@@ -1,11 +1,29 @@
 import { FunctionalComponent, h } from 'preact'
 import { Link } from 'preact-router/match'
-import style from './style.css'
+
+import { Icon } from '@material-ui/core'
+
+import CottageOutlinedSvg from '../../assets/icons/cottage-outlined.svg'
+
+import './style.scss'
 
 const Header: FunctionalComponent = () => {
     return (
-        <header class={style.header}>
-            <h1>Preact App</h1>
+        <header className="header">
+            <nav role="navigation">
+                <Link className="navLink homeNavLink" activeClassName="activeNavLink" href="/">
+                    <Icon>
+                        <img src={CottageOutlinedSvg} height={32} width={32} />
+                    </Icon>
+                </Link>
+                <div class="_right">
+                    <Link className="navLink aboutNavLink" activeClassName="activeNavLink" href="/">
+                        About
+                    </Link>
+                </div>
+            </nav>
+
+            {/* <h1>Preact App</h1>
             <nav>
                 <Link activeClassName={style.active} href="/">
                     Home
@@ -16,7 +34,8 @@ const Header: FunctionalComponent = () => {
                 <Link activeClassName={style.active} href="/profile/john">
                     John
                 </Link>
-            </nav>
+            </nav> */}
+            <div>Test</div>
         </header>
     )
 }

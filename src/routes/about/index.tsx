@@ -6,7 +6,7 @@ interface Props {
     user: string
 }
 
-const Profile: FunctionalComponent<Props> = (props: Props) => {
+const About: FunctionalComponent<Props> = (props: Props) => {
     const { user } = props
     const [time, setTime] = useState<number>(Date.now())
     const [count, setCount] = useState<number>(0)
@@ -40,4 +40,4 @@ const Profile: FunctionalComponent<Props> = (props: Props) => {
     )
 }
 
-export default Profile
+export default About

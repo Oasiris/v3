@@ -5,9 +5,10 @@
   "license": "MIT",
   "scripts": {
     "build": "preact build",
-    "serve": "sirv build --port 8080 --cors --single",
     "dev": "preact watch",
     "lint": "eslint 'src/**/*.{js,jsx,ts,tsx}'",
+    "serve": "sirv build --port 8080 --cors --single",
+    "start": "npm run dev",
     "test": "jest ./tests"
   },
   "eslintConfig": {
@@ -21,6 +22,8 @@
     ]
   },
   "dependencies": {
+    "@material-ui/core": "^4.12.3",
+    "@material-ui/icons": "^4.11.2",
     "preact": "^10.3.1",
     "preact-render-to-string": "^5.1.4",
     "preact-router": "^3.2.1"

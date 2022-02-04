@@ -1,0 +1,16 @@
+header {
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+
+    justify-content: space-between;
+
+    & > div._right {
+        margin-left: auto;
+        order: 2;
+    }
+}

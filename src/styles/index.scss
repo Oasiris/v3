@@ -1,0 +1,56 @@
+@import 'colors';
+
+$fontStack: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
+    'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+
+body {
+    padding: 0;
+    margin: 0;
+    background: $globalBackground;
+
+    font-family: $fontStack;
+    font-weight: 400;
+    font-size: 14.5px;
+    line-height: 1.5;
+    letter-spacing: -0.012em;
+    color: $textColor;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+#root {
+    height: 100%;
+
+    padding: 40px 75px;
+
+    // Mobile: Smaller padding.
+    @media (max-width: 767px) {
+        padding: 20px 25px;
+    }
+}
+
+// html,
+// body {
+//     height: 100%;
+//     width: 100%;
+//     padding: 0;
+//     margin: 0;
+//     background: #fafafa;
+//     font-family: 'Helvetica Neue', arial, sans-serif;
+//     font-weight: 400;
+//     color: #444;
+//     -webkit-font-smoothing: antialiased;
+//     -moz-osx-font-smoothing: grayscale;
+// }
+
+// * {
+//     box-sizing: border-box;
+// }
+
+// #preact_root {
+//     height: 100%;
+// }
