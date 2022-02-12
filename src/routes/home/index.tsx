@@ -4,6 +4,7 @@ import { Icon } from '@material-ui/core'
 import style from './style.scss'
 
 import ExternalLinkSvg from '../../assets/icons/open-in-new.svg'
+import CodeSvg from '../../assets/icons/code.svg'
 import GithubSvg from '../../assets/icons/github-brands.svg'
 import LinkedInSvg from '../../assets/icons/linkedin-brands.svg'
 
@@ -250,6 +251,19 @@ const Home: FunctionalComponent = () => {
                             <Icon>
                                 <img src={LinkedInSvg} width={30} height={30} />
                                 <span class="linkAltText">My LinkedIn profile</span>
+                            </Icon>
+                        </a>
+                    </li>
+                    <li class={style.footerMedia}>
+                        <a
+                            class={style.footerLink}
+                            href="https://github.com/Oasiris/v3"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            <Icon>
+                                <img src={CodeSvg} width={30} height={30} />
+                                <span class="linkAltText">See website source</span>
                             </Icon>
                         </a>
                     </li>
