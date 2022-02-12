@@ -1,17 +1,24 @@
+@import '../../styles/colors';
+
 header {
     width: 100%;
 }
 
 .nav {
     display: flex;
-    width: 100%;
     flex-direction: row;
-
     justify-content: space-between;
 
+    width: 100%;
+    padding-left: 14.5px;
+    padding-right: 18.5px;
+    padding-bottom: 6.25px;
+
     .navLink {
-        font-size: 16.5px;
-        letter-spacing: -0.013em;
+        font-size: 14.7px;
+        font-weight: 500;
+        color: $navColor;
+        letter-spacing: -0.018em;
     }
 
     & > ._right {
@@ -23,5 +30,11 @@ header {
         display: flex;
         flex-direction: column;
         justify-content: center;
+
+        line-height: 1.8;
     }
+}
+
+.activeNavLink {
+    opacity: 0.3;
 }

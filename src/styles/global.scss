@@ -1,0 +1,67 @@
+// ——————————————
+// Grow
+// ——————————————
+
+.grow {
+    transition: all 0.04s ease-in-out;
+    &:hover {
+        transform: scale(1.05);
+    }
+    &.clickable:active {
+        transform: scale(1);
+        transition: all 0s linear;
+    }
+}
+
+.growSlight {
+    transition: all 0.026666s ease-in-out;
+    &:hover {
+        transform: scale(1.025);
+    }
+    &.clickable:active {
+        transform: scale(1);
+        transition: all 0s linear;
+    }
+}
+
+.growSlighter {
+    transition: all 0.0288888s ease-in-out;
+    &:hover {
+        transform: scale(1.0136666);
+    }
+    &.clickable:active {
+        transform: scale(1);
+        transition: all 0s linear;
+    }
+}
+
+.growSlightest {
+    transition: all 0.01888s ease-in-out;
+    &:hover {
+        transform: scale(1.00888888);
+    }
+    &.clickable:active {
+        transform: scale(1);
+        transition: all 0s linear;
+    }
+}
+
+// Like .growSlightest, but preserves a X:Y ratio of 1.00:1.02.
+.growHeader {
+    transition: all 0.01888s ease-in-out;
+    &:hover {
+        transform: scale(1.00888, 1.02) !important;
+    }
+    &.clickable:active {
+        transform: scale(1, 1.018);
+        transition: all 0s linear;
+    }
+}
+
+// ——————————————
+// Misc
+// ——————————————
+
+.unfocusable:focus {
+    outline: none;
+}

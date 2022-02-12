@@ -12,7 +12,7 @@ const Header: FunctionalComponent = () => {
             <div className="container">
                 <nav class={style.nav} role="navigation">
                     <Link
-                        className={`${style.navLink} ${style.homeNavLink}`}
+                        class={`${style.navLink} ${style.homeNavLink} grow`}
                         activeClassName={style.activeNavLink}
                         href="/"
                     >
@@ -22,8 +22,8 @@ const Header: FunctionalComponent = () => {
                     </Link>
                     <div className={`${style._right}`}>
                         <Link
-                            className={`${style.navLink} ${style.aboutNavLink}`}
-                            activeClassName="activeNavLink"
+                            class={`${style.navLink} ${style.aboutNavLink} grow`}
+                            activeClassName={style.activeNavLink}
                             href="/about"
                         >
                             About

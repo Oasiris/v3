@@ -44,7 +44,7 @@ const EXPERIENCE_ITEMS = [
         endDate: 'Aug 2017',
         Description: () => (
             <p class={style.workBlurb}>
-                Aggregated 5,000+ air quality stations for mobile app providing real-time local AQ
+                Aggregated 5,000+ air quality stations for mobile app showing real-time local AQ
                 updates. Managed four other interns.
             </p>
         ),
@@ -95,9 +95,9 @@ const Home: FunctionalComponent = () => {
     return (
         <div class={`container ${style.home}`}>
             <section class={`${style.hookSection}`}>
-                <div class={style.blurb}>
-                    <h2>I'm a Software Engineer and leisure creative.</h2>
-                    <p>
+                <div class={`${style.blurb}`}>
+                    <h2 class="growHeader">I'm David, a Software Engineer and leisure creative.</h2>
+                    <p class="growHeader">
                         I'm most myself when I'm devising, designing, and building things.
                         <br />
                         Exploring the spaces between humanity and technology.
@@ -111,9 +111,11 @@ const Home: FunctionalComponent = () => {
                 </div>
             </section>
             <section class={style.listSection}>
-                <div class={style.sectionHeader}>Experience</div>
+                <div class={style.sectionHeader}>
+                    <h3 class="growSlight">Experience</h3>
+                </div>
                 <div class={style.sectionContent}>
-                    <ul class={style.workList}>
+                    <ul class={`${style.contentList} ${style.workList}`}>
                         {EXPERIENCE_ITEMS.map(
                             ({
                                 roleName,
@@ -123,24 +125,26 @@ const Home: FunctionalComponent = () => {
                                 endDate,
                                 Description,
                             }) => (
-                                <li class={style.workItem} key={company}>
-                                    <div class={style.workDetails}>
-                                        <div
-                                            class={`${style.workItemHeader} ${
-                                                !isSignificant ? style.secondaryWorkHeader : ''
-                                            }`}
-                                        >
-                                            {roleName}
+                                <li class={`${style.workItem}`} key={company}>
+                                    <div class="growSlighter">
+                                        <div class={style.workDetails}>
+                                            <div
+                                                class={`${style.workItemHeader} ${
+                                                    !isSignificant ? style.secondaryWorkHeader : ''
+                                                }`}
+                                            >
+                                                {roleName}
+                                            </div>
+                                            <div class={style.workDates}>
+                                                <span class={style.workStartDate}>{startDate}</span>
+                                                <span class={style.workDateTo}>—</span>
+                                                <span class={style.workEndDate}>{endDate}</span>
+                                            </div>
                                         </div>
-                                        <div class={style.workDates}>
-                                            <span class={style.workStartDate}>{startDate}</span>
-                                            <span class={style.workDateTo}>—</span>
-                                            <span class={style.workEndDate}>{endDate}</span>
+                                        <div class={style.workCompanyName}>{company}</div>
+                                        <div class={style.workBlurbWrapper}>
+                                            <Description />
                                         </div>
-                                    </div>
-                                    <div class={style.workCompanyName}>{company}</div>
-                                    <div class={style.workBlurbWrapper}>
-                                        <Description />
                                     </div>
                                 </li>
                             ),
@@ -149,9 +153,11 @@ const Home: FunctionalComponent = () => {
                 </div>
             </section>
             <section class={style.listSection}>
-                <div class={style.sectionHeader}>Work</div>
+                <div class={style.sectionHeader}>
+                    <h3>Work</h3>
+                </div>
                 <div class={style.sectionContent}>
-                    <ul class={style.projectList}>
+                    <ul class={`${style.contentList} ${style.projectList}`}>
                         {PROJECT_ITEMS.map(({ title, contextPhrase, Description, tags }) => (
                             <li class={style.projectItem} key={title}>
                                 <div class={style.projectBanner}>

@@ -13,8 +13,7 @@ a {
 // Mobile.
 @media (max-width: 767px) {
     .container {
-        padding-left: 20px;
-        padding-right: 20px;
+        padding: 0 22px;
     }
 }
 
@@ -27,6 +26,6 @@ a {
 
 @media (min-width: 933px) {
     .container {
-        width: 840px;
+        width: 830px;
     }
 }

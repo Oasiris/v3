@@ -1,8 +1,12 @@
 @import '../../styles/colors';
 
-// section {
-//     background: blue;
-// }
+.home {
+    min-height: 100%;
+}
+
+// ——————————————
+// Sections
+// ——————————————
 
 .hookSection,
 .listSection {
@@ -10,16 +14,273 @@
     box-sizing: border-box;
 }
 
-.hookSection {
-    border-top: 1px solid $hrColor;
-    padding-top: 20px;
-    padding-bottom: 50px;
-}
+// === List Sections ===
 
 .listSection {
-    padding-top: 30px;
-    padding-bottom: 55px;
+    padding: 47.5px 0 55px;
+    // padding: 70px 0 75px;
 
-    .sectionHeader {
+    .sectionHeader h3 {
+        display: inline-block;
+        padding: 0;
+        margin-block-start: 0;
+        margin-block-end: 40px;
+    }
+
+    ul.contentList {
+        position: relative;
+        margin: 0;
+        padding: 0 0 0 25px;
+        list-style: none;
+        & > li::before {
+            content: '▸';
+            font-size: 17px;
+            line-height: 1.7;
+            position: absolute;
+            left: 10px;
+            padding-top: 9px;
+
+            transition: font-size 0.06667s, line-height 0.06667s, left 0.06667s;
+        }
+
+        & > li:hover::before {
+            font-size: 21px;
+            line-height: 1.25;
+            left: 4px;
+        }
+
+        & > li {
+            margin-block-start: 20px;
+            margin-block-end: 20px;
+        }
+
+        // List-items only have margins between one another.
+        & > li:first-child {
+            margin-block-start: 0px;
+            &::before {
+                padding-top: 0px;
+            }
+            & > div {
+                padding-top: 0px;
+            }
+        }
+        & > li:last-child {
+            margin-block-end: 0px;
+            & > div {
+                padding-bottom: 0px;
+            }
+        }
     }
 }
+
+// Desktop: Adopt a 2-column layout, with header on left, content on right.
+@media (min-width: 992px) {
+    .listSection {
+        padding: 75px 0 76.25px;
+
+        display: flex;
+        flex-direction: row;
+
+        & > .sectionHeader {
+            width: 136px;
+            text-align: right;
+            padding-right: 22px;
+            h3 {
+                font-size: 20.8px;
+                line-height: 1.35;
+            }
+        }
+
+        & > .sectionContent {
+            flex-grow: 1;
+        }
+    }
+}
+
+// ——————————————
+// Hook
+// ——————————————
+
+.hookSection {
+    border-top: 1px solid $hrColor;
+    padding: 45px 0;
+
+    .blurb h2 {
+        margin: 0;
+        //        padding-block-end: 20px;
+        padding-block-end: 30px;
+
+        transform: scale(1, 1.018);
+        letter-spacing: -0.019em;
+        font-size: 23.4px;
+        font-weight: 400;
+    }
+
+    .blurb p {
+        margin: 0;
+        // padding-block-end: 25px;
+        padding-block-end: 30px;
+
+        font-size: 16.9px;
+        font-weight: 400;
+        line-height: 1.525;
+
+        br {
+            display: block;
+            content: '';
+            border-bottom: 8px solid transparent;
+        }
+    }
+
+    .resumeButtonWrapper a {
+        display: inline-block;
+
+        padding: 8px 23px;
+        font-size: 15.85px;
+        letter-spacing: -0.006em;
+
+        color: $handsomeSeafoam;
+        border: 1px solid $handsomeSeafoam;
+        box-sizing: border-box;
+        border-radius: 3px;
+        transition: 0.1s color, 0.1s background;
+
+        &:hover:not(:active) {
+            color: $globalBackground;
+            background: $handsomeSeafoam;
+        }
+    }
+}
+
+// Mobile: Change sizing.
+@media (max-width: 767px) {
+    .hookSection .blurb {
+        text-align: center;
+    }
+    .hookSection .resumeButtonWrapper {
+        display: flex;
+        justify-content: center;
+    }
+
+    .hookSection .blurb h2 {
+        font-size: 21px;
+    }
+
+    .hookSection .blurb p {
+        font-size: 15.55px;
+        font-weight: 400;
+    }
+}
+
+// Tablet: no changes.
+
+// Desktop: Move button to right.
+@media (min-width: 992px) {
+    .hookSection {
+        // padding: 45px 0 47.5px;
+        padding: 52.5px 0 55px;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        text-align: center;
+
+        .blurb h2 {
+            font-size: 25.2px;
+        }
+        .blurb p {
+            font-size: 17.6px;
+            font-weight: 500;
+            letter-spacing: -0.003em;
+            transform: scale(1, 1.015);
+            padding-block-end: 0;
+        }
+
+        ._divider {
+            width: 5.55555%;
+        }
+
+        .resumeButtonWrapper {
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+
+// ——————————————
+// Experience
+// ——————————————
+
+.listSection .workItem {
+    & > div {
+        padding: 10px 10px 10px 5px; // 5px left padding
+    }
+
+    .workDetails {
+        display: flex;
+        // margin-bottom: 3.25px;
+        margin-bottom: 5px;
+    }
+
+    .workItemHeader {
+        font-size: 19.4px;
+        letter-spacing: -0.015em;
+        font-weight: 600;
+        &.secondaryWorkHeader {
+            font-size: 18.7px;
+            font-weight: 500;
+        }
+    }
+
+    .workDates {
+        order: 2;
+        margin-left: auto;
+        font-size: 15.2px;
+        letter-spacing: -0.008em;
+
+        & > span {
+            padding-top: 3px;
+            display: inline-flex;
+            height: 100%;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .workDateTo {
+            margin: 0 8px;
+        }
+    }
+
+    .workCompanyName {
+        font-size: 16.6px;
+        // margin-bottom: 5.3333px;
+        margin-bottom: 6.75px;
+    }
+
+    .workBlurb {
+        font-size: 14.9px;
+        letter-spacing: -0.011em;
+        color: $subtextColor;
+        margin-block-start: 5.3333px;
+        margin-block-end: 5.3333px;
+    }
+}
+
+// Mobile: Change font sizes.
+@media (max-width: 767px) {
+    .listSection .workItem .workItemHeader {
+        font-size: 18.4px;
+        &.secondaryWorkHeader {
+            font-size: 17.8px;
+        }
+    }
+}
+
+// ——————————————
+// Work/Projects
+// ——————————————
+
+// ——————————————
+// Footer
+// ——————————————

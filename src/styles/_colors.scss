@@ -1,6 +1,18 @@
-$textColor: rgba(black, 0.9);
-$globalBackground: rgb(252, 251, 251);
+// $textColor: rgba(black, 0.9);
+$textColor: rgba(rgb(20, 18, 18), 0.86);
+$headerColor: rgba(rgb(20, 18, 18), 0.92);
+$navColor: rgba(rgb(20, 18, 18), 0.78);
+
+// $globalBackground: rgb(252, 251, 251);
+$globalBackground: rgb(253, 254, 253);
 
 // ————————————
 
-$hrColor: #dde6dd;
+$handsomeSeafoam: rgb(25, 147, 96);
+
+// ————————————
+
+$subtextColor: rgba($textColor, 0.6);
+
+$hrColor: #dfd3d1;
+$resumeButtonColor: $handsomeSeafoam;

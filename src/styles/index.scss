@@ -18,6 +18,17 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5 {
+    color: $headerColor;
+    font-weight: 800;
+    letter-spacing: -0.016em;
+    line-height: 1.5;
+}
+
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
@@ -25,20 +36,20 @@ code {
 #root {
     height: 100%;
 
-    padding: 35px 60px;
+    // padding: 35px 60px;
+    padding: 35px 47.5px;
 
-    // Mobile: Smaller padding.
+    // Mobile: Eliminate side padding; .container solely pads document.
     @media (max-width: 767px) {
-        padding: 20px 25px;
+        padding: 20px 0;
     }
 }
 
 // ——————————————————————————————————————————
 
-// .navLink {
-//     font-size: 30px;
-// }
-
-// .oops {
-//     background: yellow;
-// }
+h3 {
+    font-size: 21.6px;
+    letter-spacing: -0.019em;
+    margin-block-start: 10px;
+    margin-block-end: 10px;
+}
