@@ -18,6 +18,7 @@ const Header: FunctionalComponent = () => {
                     >
                         <Icon>
                             <img src={CottageOutlinedSvg} height={30} width={30} />
+                            <span class="linkAltText">Home</span>
                         </Icon>
                     </Link>
                     <div className={`${style._right}`}>

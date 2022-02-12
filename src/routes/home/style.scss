@@ -44,8 +44,8 @@
         }
 
         & > li:hover::before {
-            font-size: 20.5px;
-            line-height: 1.18;
+            font-size: 22.5px;
+            line-height: 1.1;
             left: 4px;
         }
 
@@ -125,6 +125,10 @@
         font-weight: 400;
         line-height: 1.525;
 
+        ._smaller {
+            font-size: 16.6px;
+        }
+
         br {
             display: block;
             content: '';
@@ -169,6 +173,10 @@
     .hookSection .blurb p {
         font-size: 15.55px;
         font-weight: 400;
+
+        ._smaller {
+            font-size: 15.35px;
+        }
     }
 }
 
@@ -189,11 +197,16 @@
             font-size: 25.2px;
         }
         .blurb p {
+            transform: scale(1, 1.015);
+            padding-block-end: 0;
+
             font-size: 17.6px;
             font-weight: 500;
             letter-spacing: -0.003em;
-            transform: scale(1, 1.015);
-            padding-block-end: 0;
+
+            ._smaller {
+                font-size: 16.6px;
+            }
         }
 
         ._divider {
@@ -236,16 +249,16 @@
     .workDates {
         order: 2;
         margin-left: auto;
+        padding-left: 7.5px;
+
         font-size: 15.2px;
         letter-spacing: -0.008em;
 
+        display: flex;
+        align-items: center;
+
         & > span {
-            padding-top: 3px;
-            display: inline-flex;
-            height: 100%;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
+            display: inline-block;
         }
 
         .workDateTo {
@@ -256,24 +269,36 @@
     .workCompanyName {
         font-size: 16.6px;
         // margin-bottom: 5.3333px;
-        margin-bottom: 6.75px;
+        margin-bottom: 6.33333px;
     }
 
     .workBlurb {
-        font-size: 14.9px;
-        letter-spacing: -0.011em;
-        color: $subtextColor;
         margin-block-start: 5.3333px;
         margin-block-end: 5.3333px;
+
+        color: $subtextColor;
+        font-size: 14.9px;
+        letter-spacing: -0.008em;
+        line-height: 1.625;
     }
 }
 
 // Mobile: Change font sizes.
 @media (max-width: 767px) {
-    .listSection .workItem .workItemHeader {
-        font-size: 18.4px;
-        &.secondaryWorkHeader {
-            font-size: 17.8px;
+    .listSection .workItem {
+        .workItemHeader {
+            font-size: 18.2px;
+            &.secondaryWorkHeader {
+                font-size: 17.6px;
+            }
+        }
+
+        .workDates {
+            font-size: 13.8px;
+            letter-spacing: 0.001em;
+            .workDateTo {
+                margin: 0 6px;
+            }
         }
     }
 }
@@ -283,14 +308,29 @@
 // ——————————————
 
 // Custom spacing.
-.listSection.projectListSection {
-    padding: 65px 0 72.5px;
+@media (min-width: 992px) {
+    .listSection.projectListSection {
+        padding: 65px 0 72.5px;
+    }
+}
+
+// Tweak for Project section: increase margin between list items.
+.listSection ul.projectList li {
+    margin-block-start: 25px;
+    margin-block-end: 25px;
+
+    &::before {
+        padding-top: 15px;
+    }
+    &:hover::before {
+        line-height: 1.07;
+    }
 }
 
 .listSection .projectItem {
     // Padding.
     & > div {
-        padding: 10px 10px 10px 5px;
+        padding: 15px 10px 15px 5px;
     }
 
     .projectBanner {
@@ -298,12 +338,13 @@
         flex-direction: row;
         align-items: center;
 
-        margin-bottom: 16.5px;
+        margin-bottom: 17.5px;
 
         & > .projectTitle {
-            font-size: 19.4px;
+            font-size: 20.3px;
             letter-spacing: -0.015em;
             font-weight: 600;
+            line-height: 1.45;
         }
 
         // Project context snaps to right.
@@ -329,12 +370,12 @@
 
     .projectBlurbWrapper p {
         margin: 12.5px 0;
-        font-size: 16px;
+        font-size: 16.25px;
         line-height: 1.6825;
     }
 
     ul.projectTags {
-        margin-top: 19.5px;
+        margin-top: 20.5px;
         list-style: none;
         padding: 0;
 
@@ -343,14 +384,16 @@
         & > li {
             display: inline-flex;
             margin: 4.25px 4.825px;
-            padding: 2px 12.75px;
-            border-radius: 2px;
+            // padding: 2px 12.75px;
+            padding: 4.25px 15.5px;
+            border-radius: 2.75px;
 
             color: $itemText;
             background: $itemBackground;
 
-            font-size: 13.625px;
-            letter-spacing: -0.004em;
+            // font-size: 13.625px;
+            font-size: 13.25px;
+            letter-spacing: 0.002em;
 
             transition: background 0.1s;
             &:hover {
@@ -360,12 +403,47 @@
     }
 }
 
-// For projects, increase margin between list items.
-.listSection ul.projectList li {
-    margin-block-start: 37.5px;
-    margin-block-end: 37.5px;
-}
-
 // ——————————————
 // Footer
 // ——————————————
+
+.footer {
+    padding: 25px 0 30px;
+
+    color: $subtextColor;
+    font-size: 13.625px;
+    font-weight: 500;
+    letter-spacing: -0.002em;
+
+    p.footerRow {
+        text-align: center;
+        margin-block-start: 13.75px;
+        margin-block-end: 13.75px;
+    }
+
+    ul.footerMediaList {
+        list-style: none;
+        margin-top: 29.5px;
+        padding: 0;
+
+        display: flex;
+        justify-content: center;
+
+        & > li {
+            display: inline-flex;
+            margin: 0 7.5px;
+
+            opacity: 0.6;
+            transition: opacity 0.05s;
+            &:hover:not(:active) {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .footer {
+        padding: 35px 0 42.5px;
+    }
+}

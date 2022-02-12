@@ -1,4 +1,13 @@
 // ——————————————
+// Accessibility
+// ——————————————
+
+.linkAltText {
+    // These are for screen readers, but shouldn't display.
+    display: none;
+}
+
+// ——————————————
 // Grow
 // ——————————————
 

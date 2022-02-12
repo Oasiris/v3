@@ -37,12 +37,13 @@ code {
     height: 100%;
 
     // padding: 35px 60px;
-    padding: 35px 47.5px;
+    // padding: 35px 47.5px;
+    // padding-bottom: 0;
 
-    // Mobile: Eliminate side padding; .container solely pads document.
-    @media (max-width: 767px) {
-        padding: 20px 0;
-    }
+    // // Mobile: Eliminate side padding; .container solely pads document.
+    // @media (max-width: 767px) {
+    // padding: 20px 0;
+    // }
 }
 
 // ——————————————————————————————————————————

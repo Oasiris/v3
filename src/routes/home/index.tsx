@@ -100,7 +100,9 @@ const Home: FunctionalComponent = () => {
                     <p class="growHeader">
                         I'm most myself when I'm devising, designing, and building things.
                         <br />
-                        Exploring the spaces between humanity and technology.
+                        <span class={style._smaller}>
+                            Exploring the spaces between humanity and technology.
+                        </span>
                     </p>
                 </div>
                 <div class={style._divider} />
@@ -170,10 +172,7 @@ const Home: FunctionalComponent = () => {
                                     </div>
                                     <ul class={style.projectTags}>
                                         {tags.map((tagString) => (
-                                            <li
-                                                class={`${style.projectTag} growSlight`}
-                                                key={tagString}
-                                            >
+                                            <li class={`${style.projectTag} grow`} key={tagString}>
                                                 {tagString}
                                             </li>
                                         ))}
@@ -197,6 +196,7 @@ const Home: FunctionalComponent = () => {
                         >
                             <Icon>
                                 <img src={GithubSvg} width={30} height={30} />
+                                <span class="linkAltText">My GitHub page</span>
                             </Icon>
                         </a>
                     </li>
@@ -209,6 +209,7 @@ const Home: FunctionalComponent = () => {
                         >
                             <Icon>
                                 <img src={LinkedInSvg} width={30} height={30} />
+                                <span class="linkAltText">My LinkedIn profile</span>
                             </Icon>
                         </a>
                     </li>
