@@ -152,7 +152,7 @@ const Home: FunctionalComponent = () => {
                     </ul>
                 </div>
             </section>
-            <section class={style.listSection}>
+            <section class={`${style.listSection} ${style.projectListSection}`}>
                 <div class={style.sectionHeader}>
                     <h3>Work</h3>
                 </div>
@@ -160,20 +160,25 @@ const Home: FunctionalComponent = () => {
                     <ul class={`${style.contentList} ${style.projectList}`}>
                         {PROJECT_ITEMS.map(({ title, contextPhrase, Description, tags }) => (
                             <li class={style.projectItem} key={title}>
-                                <div class={style.projectBanner}>
-                                    <div class={style.projectTitle}>{title}</div>
-                                    <div class={style.projectContext}>{contextPhrase}</div>
+                                <div class="growSlighter">
+                                    <div class={style.projectBanner}>
+                                        <div class={style.projectTitle}>{title}</div>
+                                        <div class={style.projectContext}>{contextPhrase}</div>
+                                    </div>
+                                    <div class={style.projectBlurbWrapper}>
+                                        <Description />
+                                    </div>
+                                    <ul class={style.projectTags}>
+                                        {tags.map((tagString) => (
+                                            <li
+                                                class={`${style.projectTag} growSlight`}
+                                                key={tagString}
+                                            >
+                                                {tagString}
+                                            </li>
+                                        ))}
+                                    </ul>
                                 </div>
-                                <div class={style.projectBlurbWrapper}>
-                                    <Description />
-                                </div>
-                                <ul class={style.projectTags}>
-                                    {tags.map((tagString) => (
-                                        <li class={style.projectTag} key={tagString}>
-                                            {tagString}
-                                        </li>
-                                    ))}
-                                </ul>
                             </li>
                         ))}
                     </ul>

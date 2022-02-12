@@ -34,18 +34,18 @@
         list-style: none;
         & > li::before {
             content: '▸';
-            font-size: 17px;
+            font-size: 16px;
             line-height: 1.7;
             position: absolute;
-            left: 10px;
-            padding-top: 9px;
+            left: 9px;
+            padding-top: 10px;
 
             transition: font-size 0.06667s, line-height 0.06667s, left 0.06667s;
         }
 
         & > li:hover::before {
-            font-size: 21px;
-            line-height: 1.25;
+            font-size: 20.5px;
+            line-height: 1.18;
             left: 4px;
         }
 
@@ -82,7 +82,7 @@
         flex-direction: row;
 
         & > .sectionHeader {
-            width: 136px;
+            width: 153.25px;
             text-align: right;
             padding-right: 22px;
             h3 {
@@ -232,6 +232,7 @@
         }
     }
 
+    // .workDates snaps to right.
     .workDates {
         order: 2;
         margin-left: auto;
@@ -280,6 +281,90 @@
 // ——————————————
 // Work/Projects
 // ——————————————
+
+// Custom spacing.
+.listSection.projectListSection {
+    padding: 65px 0 72.5px;
+}
+
+.listSection .projectItem {
+    // Padding.
+    & > div {
+        padding: 10px 10px 10px 5px;
+    }
+
+    .projectBanner {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        margin-bottom: 16.5px;
+
+        & > .projectTitle {
+            font-size: 19.4px;
+            letter-spacing: -0.015em;
+            font-weight: 600;
+        }
+
+        // Project context snaps to right.
+        & > .projectContext {
+            order: 2;
+            margin-left: auto;
+
+            color: rgba($textColor, 0.75);
+            font-size: 14.25px;
+            font-weight: 500;
+            letter-spacing: -0.009em;
+            font-style: italic;
+            line-height: 1.4;
+
+            transform: scale(1, 1.04);
+
+            box-sizing: border-box;
+            // border: 1px solid grey;
+            border-radius: 3px;
+            padding: 2px 10px;
+        }
+    }
+
+    .projectBlurbWrapper p {
+        margin: 12.5px 0;
+        font-size: 16px;
+        line-height: 1.6825;
+    }
+
+    ul.projectTags {
+        margin-top: 19.5px;
+        list-style: none;
+        padding: 0;
+
+        cursor: default;
+
+        & > li {
+            display: inline-flex;
+            margin: 4.25px 4.825px;
+            padding: 2px 12.75px;
+            border-radius: 2px;
+
+            color: $itemText;
+            background: $itemBackground;
+
+            font-size: 13.625px;
+            letter-spacing: -0.004em;
+
+            transition: background 0.1s;
+            &:hover {
+                background: $itemBackgroundHover;
+            }
+        }
+    }
+}
+
+// For projects, increase margin between list items.
+.listSection ul.projectList li {
+    margin-block-start: 37.5px;
+    margin-block-end: 37.5px;
+}
 
 // ——————————————
 // Footer
