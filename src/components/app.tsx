@@ -9,7 +9,8 @@ import Header from './header'
 const App: FunctionalComponent = () => {
     return (
         <div id="root">
-            <Header />
+            {/* <Header /> */}
+            <div style={{ height: '40px' }} />
             <Router>
                 <Route path="/" component={Home} />
                 {/* <Route path="/about/" component={About} user="me" /> */}
