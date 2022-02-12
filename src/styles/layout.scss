@@ -13,6 +13,13 @@ a {
 // Mobile.
 @media (max-width: 767px) {
     .container {
+        padding: 0 35px;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 550px) {
+    .container {
         padding: 0 25px;
         max-width: 100%;
     }

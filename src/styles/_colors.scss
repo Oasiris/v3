@@ -8,14 +8,20 @@ $globalBackground: rgb(253, 254, 253);
 
 // ————————————
 
-$handsomeSeafoam: rgb(25, 147, 96);
+$seafoamWhiteTint: rgb(245, 255, 251);
+
+$seafoam100: rgb(179, 255, 233);
+$seafoam300: rgb(2, 216, 166);
+// $seafoam500: rgb(13, 140, 104);
+$seafoam600: rgb(43, 145, 123);
+$seafoam700: rgb(7, 122, 99);
+$seafoam800: rgb(10, 101, 83);
+$seafoam900: rgb(10, 74, 62);
 
 // ————————————
 
 $subtextColor: rgba($textColor, 0.58);
 $hrColor: #dfd3d1;
-
-$resumeButtonColor: $handsomeSeafoam;
 
 $itemText: rgba($textColor, 0.725);
 $itemBackground: rgba($textColor, 0.0525);

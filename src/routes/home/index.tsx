@@ -3,8 +3,11 @@ import { Icon } from '@material-ui/core'
 
 import style from './style.scss'
 
+import ExternalLinkSvg from '../../assets/icons/open-in-new.svg'
 import GithubSvg from '../../assets/icons/github-brands.svg'
 import LinkedInSvg from '../../assets/icons/linkedin-brands.svg'
+
+import Button from '../../components/button'
 
 // 2022.01.11
 const RESUME_LINK = 'https://drive.google.com/file/d/12kb5357ys061ndyUO1fNvzD4uweXSGpQ/view'
@@ -70,6 +73,8 @@ const PROJECT_ITEMS = [
             'Peer-to-Peer Video',
             'Project Lead',
         ],
+        hasLink: true,
+        link: 'https://useconcord.app/',
     },
     {
         title: 'Moodmeter',
@@ -88,6 +93,8 @@ const PROJECT_ITEMS = [
             'Data Visualization',
             'Deep Learning',
         ],
+        hasLink: true,
+        link: 'https://www.youtube.com/watch?v=7ox7wi_RH_w',
     },
 ]
 
@@ -106,9 +113,11 @@ const Home: FunctionalComponent = () => {
                     </p>
                 </div>
                 <div class={style._divider} />
+
+                {/* <Button>Resume</Button> */}
                 <div class={style.resumeButtonWrapper}>
                     <a href={RESUME_LINK} target="_blank" rel="noreferrer">
-                        Resume
+                        <Button>{'Resume'}</Button>
                     </a>
                 </div>
             </section>
@@ -160,32 +169,63 @@ const Home: FunctionalComponent = () => {
                 </div>
                 <div class={style.sectionContent}>
                     <ul class={`${style.contentList} ${style.projectList}`}>
-                        {PROJECT_ITEMS.map(({ title, contextPhrase, Description, tags }) => (
-                            <li class={style.projectItem} key={title}>
-                                <div class="growSlighter">
-                                    <div class={style.projectBanner}>
-                                        <div class={style.projectTitle}>{title}</div>
-                                        <div class={style.projectContext}>{contextPhrase}</div>
+                        {PROJECT_ITEMS.map(
+                            ({ title, contextPhrase, Description, tags, hasLink, link }) => (
+                                <li class={style.projectItem} key={title}>
+                                    <div class="growSlighter">
+                                        <div class={style.projectBanner}>
+                                            {/* If project has link, show link icon. */}
+                                            {hasLink ? (
+                                                <a
+                                                    class={style.footerLink}
+                                                    href={link}
+                                                    target="_blank"
+                                                    rel="noreferrer"
+                                                >
+                                                    <div
+                                                        class={`${style.projectTitle} ${style.projectTitleWithLink} growSlight clickable`}
+                                                    >
+                                                        {title}
+                                                        <Icon>
+                                                            <img
+                                                                src={ExternalLinkSvg}
+                                                                width={22}
+                                                                height={22}
+                                                            />
+                                                            <span class="linkAltText">
+                                                                External link to Concord
+                                                            </span>
+                                                        </Icon>
+                                                    </div>
+                                                </a>
+                                            ) : (
+                                                <div class={style.projectTitle}>{title}</div>
+                                            )}
+                                            <div class={style.projectContext}>{contextPhrase}</div>
+                                        </div>
+                                        <div class={style.projectBlurbWrapper}>
+                                            <Description />
+                                        </div>
+                                        <ul class={style.projectTags}>
+                                            {tags.map((tagString) => (
+                                                <li
+                                                    class={`${style.projectTag} grow`}
+                                                    key={tagString}
+                                                >
+                                                    {tagString}
+                                                </li>
+                                            ))}
+                                        </ul>
                                     </div>
-                                    <div class={style.projectBlurbWrapper}>
-                                        <Description />
-                                    </div>
-                                    <ul class={style.projectTags}>
-                                        {tags.map((tagString) => (
-                                            <li class={`${style.projectTag} grow`} key={tagString}>
-                                                {tagString}
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </div>
-                            </li>
-                        ))}
+                                </li>
+                            ),
+                        )}
                     </ul>
                 </div>
             </section>
             <section class={style.footer}>
                 <p class={style.footerRow}>David Hong, 2022.</p>
-                <p class={style.footerRow}>Made with ❤️ in Preact.</p>
+                <p class={style.footerRow}>Made with ❤️ in TypeScript and React.</p>
                 <ul class={style.footerMediaList}>
                     <li class={style.footerMedia}>
                         <a

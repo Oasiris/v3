@@ -1,0 +1,87 @@
+// ——————————————
+// Colors
+// ——————————————
+
+@import '../../styles/colors';
+
+// $buttonBackground: $seafoamWhiteTint;
+// $buttonTextColor: $seafoam700;
+// $buttonBorder: $seafoam300;
+// $buttonKeySide: $seafoam600;
+
+// $buttonBackgroundHover: $seafoam100;
+// $buttonTextHover: $seafoam800;
+// $buttonBackgroundActive: $seafoam300;
+// $buttonTextActive: $seafoam900;
+
+$buttonBackground: white;
+$buttonTextColor: $seafoam600;
+$buttonBorder: $seafoam600;
+$buttonKeySide: $seafoam600;
+
+$buttonBackgroundHover: rgb(112, 255, 179);
+$buttonTextHover: $seafoam800;
+$buttonBackgroundActive: $seafoam300;
+$buttonTextActive: $seafoam900;
+
+// ——————————————
+// Button
+// ——————————————
+
+.buttonWrapper {
+    display: inline-block;
+    position: relative;
+
+    button {
+        cursor: pointer;
+
+        background: $buttonBackground;
+        color: $buttonTextColor;
+
+        padding: 11.25px 15.75px;
+        padding-bottom: 12.25px;
+        border-radius: 3px;
+        border: 1.25px solid $buttonBorder;
+        box-sizing: border-box;
+
+        font-size: 15.25px;
+        font-weight: 500;
+        letter-spacing: -0.008em;
+
+        transition: top 0.04s, box-shadow 0.04s;
+        transform: scale(1, 0.9625); // Slightly wider
+    }
+
+    & > .shadowButton {
+        opacity: 0;
+        z-index: -100;
+    }
+
+    & > .realButton {
+        position: absolute;
+        top: -2px;
+        left: 0px;
+
+        box-shadow: 0 5px 0 2px $buttonKeySide;
+        &:hover:not(:active),
+        &._down {
+            color: $buttonTextHover;
+            // background: rgb(208, 199, 219);
+            background: $buttonBackgroundHover;
+            top: 0px;
+            box-shadow: 0 3px 0 2px $buttonKeySide;
+        }
+        &:active {
+            color: $buttonTextActive;
+            // background: rgb(43, 32, 73);
+            background: $buttonBackgroundActive;
+            top: 3px;
+            box-shadow: 0 0 0 0.5px $buttonKeySide;
+
+            transition: top 0.02s, box-shadow 0.02s;
+        }
+        &:focus {
+            outline: none;
+        }
+    }
+}
