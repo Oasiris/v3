@@ -9,7 +9,7 @@ import LinkedInSvg from '../../assets/icons/linkedin-brands.svg'
 
 import Button from '../../components/button'
 
-// 2022.01.11
+// 2022.03.11
 const RESUME_LINK = 'https://drive.google.com/file/d/1gKd7HTkoSfbh3qzLcEMXjLhebkfCAqUV/view'
 
 const EXPERIENCE_ITEMS = [
