@@ -9,12 +9,23 @@ import LinkedInSvg from '../../assets/icons/linkedin-brands.svg'
 
 import Button from '../../components/button'
 
-// 2022.03.11
-const RESUME_LINK = 'https://drive.google.com/file/d/1gKd7HTkoSfbh3qzLcEMXjLhebkfCAqUV/view'
+// 2022.09.12
+const RESUME_LINK = 'https://drive.google.com/file/d/1_fRIXLtUKzuphXo81Wpb2RCnYQfeT2W0/view'
 
 const EXPERIENCE_ITEMS = [
     {
         isSignificant: true,
+        company: 'Roblox',
+        roleName: 'Software Engineer',
+        startDate: 'Jun 2022',
+        endDate: 'present',
+        Description: () => (
+            <p class={style.workBlurb}>
+                Building and improving the greatest metaverse platform in the world :)
+            </p>
+        ),
+    },
+    {
         company: 'Skip',
         roleName: 'Software Engineer',
         startDate: 'Jun 2019',
@@ -27,7 +38,6 @@ const EXPERIENCE_ITEMS = [
         ),
     },
     {
-        isSignificant: true,
         company: 'Map-Collective',
         roleName: 'Full-Stack Developer',
         startDate: 'Oct 2018',
@@ -140,11 +150,13 @@ const Home: FunctionalComponent = () => {
                                     <div class="growSlighter">
                                         <div class={style.workDetails}>
                                             <div
-                                                class={`${style.workItemHeader} ${
-                                                    !isSignificant ? style.secondaryWorkHeader : ''
+                                                class={`${style.workCompanyName} ${
+                                                    isSignificant
+                                                        ? style.primaryWorkCompanyName
+                                                        : ''
                                                 }`}
                                             >
-                                                {roleName}
+                                                {company}
                                             </div>
                                             <div class={style.workDates}>
                                                 <span class={style.workStartDate}>{startDate}</span>
@@ -152,7 +164,13 @@ const Home: FunctionalComponent = () => {
                                                 <span class={style.workEndDate}>{endDate}</span>
                                             </div>
                                         </div>
-                                        <div class={style.workCompanyName}>{company}</div>
+                                        <div
+                                            class={`${style.workItemHeader} ${
+                                                !isSignificant ? style.secondaryWorkHeader : ''
+                                            }`}
+                                        >
+                                            {roleName}
+                                        </div>
                                         <div class={style.workBlurbWrapper}>
                                             <Description />
                                         </div>
