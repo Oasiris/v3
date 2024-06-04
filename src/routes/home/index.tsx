@@ -9,8 +9,7 @@ import LinkedInSvg from '../../assets/icons/linkedin-brands.svg'
 
 import Button from '../../components/button'
 
-// 2022.09.12
-const RESUME_LINK = 'https://drive.google.com/file/d/1yqRY5pw0Rs3e6GBi6XwHDERjstYJYVhs/view'
+const RESUME_LINK = 'https://drive.google.com/file/d/1yqRY5pw0Rs3e6GBi6XwHDERjstYJYVhs/view' // 2024.06.03
 
 const EXPERIENCE_ITEMS = [
     {
@@ -242,7 +241,7 @@ const Home: FunctionalComponent = () => {
                 </div>
             </section>
             <section class={style.footer}>
-                <p class={style.footerRow}>David Hong, 2022.</p>
+                <p class={style.footerRow}>David Hong, 2024.</p>
                 <p class={style.footerRow}>Made with ❤️ in TypeScript and React.</p>
                 <ul class={style.footerMediaList}>
                     <li class={style.footerMedia}>
