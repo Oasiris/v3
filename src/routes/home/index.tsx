@@ -10,7 +10,7 @@ import LinkedInSvg from '../../assets/icons/linkedin-brands.svg'
 import Button from '../../components/button'
 
 // 2022.09.12
-const RESUME_LINK = 'https://drive.google.com/file/d/1_fRIXLtUKzuphXo81Wpb2RCnYQfeT2W0/view'
+const RESUME_LINK = 'https://drive.google.com/file/d/1yqRY5pw0Rs3e6GBi6XwHDERjstYJYVhs/view'
 
 const EXPERIENCE_ITEMS = [
     {
@@ -57,7 +57,7 @@ const EXPERIENCE_ITEMS = [
         endDate: 'Aug 2017',
         Description: () => (
             <p class={style.workBlurb}>
-                Aggregated 5,000+ air quality stations for mobile app showing real-time local AQ
+                Aggregated 6,000+ air quality stations for mobile app showing real-time local AQ
                 updates. Managed four other interns.
             </p>
         ),
