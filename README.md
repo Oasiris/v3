@@ -1,6 +1,6 @@
 # Personal Site v3
 
-![Site screenshot, circa 2022 January.](./docs/cover-2022-01.png)
+![Site screenshot, circa 2024 November.](./docs/cover-2024-11.png)
 
 This is v3 of my personal website, hosted on [Oasiris.github.io](https://oasiris.github.io/). It was created in TypeScript and Preact.
 
