@@ -20,8 +20,8 @@ const EXPERIENCE_ITEMS = [
         endDate: 'Jun 2024',
         Description: () => (
             <p class={style.workBlurb}>
-                Wrote Kubernetes and Go to automate fleet operations and optimizations across Roblox
-                Private Cloud.
+                Worked on Roblox Private Cloud fleet automation to manage microservice hosting at
+                scale in Kubernetes and Go.
             </p>
         ),
     },
