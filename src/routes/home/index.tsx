@@ -9,7 +9,7 @@ import LinkedInSvg from '../../assets/icons/linkedin-brands.svg'
 
 import Button from '../../components/button'
 
-const RESUME_LINK = 'https://drive.google.com/file/d/1yqRY5pw0Rs3e6GBi6XwHDERjstYJYVhs/view' // 2024.06.03
+const RESUME_LINK = 'https://drive.google.com/file/d/1ia_esVjZ4zUOAlJTuPxyvo5FXB_bqTXS/view' // 2024.10.07
 
 const EXPERIENCE_ITEMS = [
     {
@@ -17,10 +17,11 @@ const EXPERIENCE_ITEMS = [
         company: 'Roblox',
         roleName: 'Software Engineer',
         startDate: 'Jun 2022',
-        endDate: 'present',
+        endDate: 'Jun 2024',
         Description: () => (
             <p class={style.workBlurb}>
-                Building and improving the greatest metaverse platform in the world :)
+                Wrote Kubernetes and Go to automate fleet operations and optimizations across Roblox
+                Private Cloud.
             </p>
         ),
     },
