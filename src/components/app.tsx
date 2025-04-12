@@ -15,7 +15,9 @@ const App: FunctionalComponent = () => {
                 <Route path="/" component={Home} />
                 {/* <Route path="/about/" component={About} user="me" /> */}
                 <Route path="/about/" component={About} />
-                <NotFoundPage default />
+                {/* <NotFoundPage default />
+                 */}
+                <Route default component={NotFoundPage} />
             </Router>
         </div>
     )

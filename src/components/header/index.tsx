@@ -1,5 +1,4 @@
 import { FunctionalComponent, h } from 'preact'
-import { Link } from 'preact-router/match'
 import { Icon } from '@material-ui/core'
 
 import CottageOutlinedSvg from '../../assets/icons/cottage-outlined.svg'
@@ -11,24 +10,16 @@ const Header: FunctionalComponent = () => {
         <header className="header">
             <div className="container">
                 <nav class={style.nav} role="navigation">
-                    <Link
-                        class={`${style.navLink} ${style.homeNavLink} grow`}
-                        activeClassName={style.activeNavLink}
-                        href="/"
-                    >
+                    <a class={`${style.navLink} ${style.homeNavLink} grow`} href="/">
                         <Icon>
                             <img src={CottageOutlinedSvg} height={30} width={30} />
                             <span class="linkAltText">Home</span>
                         </Icon>
-                    </Link>
+                    </a>
                     <div className={`${style._right}`}>
-                        <Link
-                            class={`${style.navLink} ${style.aboutNavLink} grow`}
-                            activeClassName={style.activeNavLink}
-                            href="/about"
-                        >
+                        <a class={`${style.navLink} ${style.aboutNavLink} grow`} href="/about">
                             About
-                        </Link>
+                        </a>
                     </div>
                 </nav>
             </div>

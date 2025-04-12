@@ -13,3 +13,10 @@ declare module '*.svg' {
     const mapping: string
     export default mapping
 }
+
+// Extend LinkProps to include href
+declare module 'preact-router/match' {
+    interface LinkProps {
+        href?: string;
+    }
+}

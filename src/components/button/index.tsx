@@ -1,8 +1,12 @@
-import { FunctionalComponent, h } from 'preact'
+import { FunctionalComponent, ComponentChildren, h } from 'preact'
 
 import style from './style.scss'
 
-const Button: FunctionalComponent = ({ children }) => {
+interface ButtonProps {
+    children: ComponentChildren; // Explicitly define children as a prop
+}
+
+const Button = ({ children }: ButtonProps): JSX.Element => {
     return (
         <div class={`${style.buttonWrapper} unselectable`}>
             {/* Shadow button, for spacing purposes. */}

@@ -9,7 +9,7 @@ import LinkedInSvg from '../../assets/icons/linkedin-brands.svg'
 
 import Button from '../../components/button'
 
-const RESUME_LINK = 'https://drive.google.com/file/d/1ia_esVjZ4zUOAlJTuPxyvo5FXB_bqTXS/view' // 2024.10.07
+const RESUME_LINK = 'https://drive.google.com/file/d/1z2P2GhRcEBum5M4uGWvy3-c3d_Kabi30/view' // 2025.04.09
 
 const EXPERIENCE_ITEMS = [
     {
@@ -124,10 +124,11 @@ const Home: FunctionalComponent = () => {
                 </div>
                 <div class={style._divider} />
 
-                {/* <Button>Resume</Button> */}
                 <div class={style.resumeButtonWrapper}>
                     <a href={RESUME_LINK} target="_blank" rel="noreferrer">
-                        <Button>{'Resume'}</Button>
+                        <Button>
+                            <span>Resume</span>
+                        </Button>
                     </a>
                 </div>
             </section>
@@ -242,7 +243,7 @@ const Home: FunctionalComponent = () => {
                 </div>
             </section>
             <section class={style.footer}>
-                <p class={style.footerRow}>David Hong, 2024.</p>
+                <p class={style.footerRow}>David Hong, 2025.</p>
                 <p class={style.footerRow}>Made with ❤️ in TypeScript and React.</p>
                 <ul class={style.footerMediaList}>
                     <li class={style.footerMedia}>
