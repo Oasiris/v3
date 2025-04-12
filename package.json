@@ -11,6 +11,9 @@
     "start": "npm run dev",
     "test": "jest ./tests"
   },
+  "engines": {
+    "node": ">=18 <20"
+  },
   "eslintConfig": {
     "parser": "@typescript-eslint/parser",
     "extends": [
